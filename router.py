@@ -1,8 +1,8 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, flash, render_template, request
 from werkzeug.utils import secure_filename
 
 router = Blueprint(__name__, 'router')
-
+ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
 
 @router.route('/')
 def home():
